@@ -38,7 +38,6 @@ Simplify your iOS development, grow your user base, and monetize more effectivel
   s.subspec 'CoreOnly' do |ss|
     ss.dependency 'FirebaseCore', '6.5.0'
     ss.source_files = 'CoreOnly/Sources/Firebase.h'
-    ss.preserve_paths = 'CoreOnly/Sources/module.modulemap'
     if ENV['FIREBASE_POD_REPO_FOR_DEV_POD'] then
       ss.user_target_xcconfig = {
         'HEADER_SEARCH_PATHS' => "$(inherited) \"" + ENV['FIREBASE_POD_REPO_FOR_DEV_POD'] + "/CoreOnly/Sources\""
